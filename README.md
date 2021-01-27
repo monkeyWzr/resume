@@ -117,3 +117,13 @@ Couseraで複数のオンラインコースを修了したことがあります�
 
 TODO
 Zapierを使ってTwitterを学習記録botにする
+
+## 自己PR
+
+### よいこと
+
+TODO
+
+### 不足
+
+TODO
