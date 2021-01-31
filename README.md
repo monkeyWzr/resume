@@ -133,7 +133,7 @@ Couseraで複数のオンラインコースを修了したことがあります�
 
 ### 業務内
 
-* Spring、Node.js + Typescriptなどをベースしたサーバーサイト開発
+* Spring、Node.js + TypeScriptなどをベースしたサーバーサイト開発
 * AWSサービスを活用した業務システム開発
 * Rustなど新言語を利用したソフトウェア開発
 * Devopsツールを導入したモダンな開発
