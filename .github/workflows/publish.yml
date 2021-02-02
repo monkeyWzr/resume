@@ -11,10 +11,9 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - run: echo "::set-env name=FILELIST::$(printf '"%s" ' *.md)"
       - uses: docker://pandoc/latex:2.9
         with:
-          args: --output=output/resume.pdf README.md # TODO: multi files support
+          args: --output=resume.pdf README.md # TODO: multi files support
       - uses: actions/upload-artifact@master
         with:
           name: publish-my-resume
