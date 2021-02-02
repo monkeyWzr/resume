@@ -1,0 +1,24 @@
+name: Publish My Resume
+
+on: push
+    branches:
+    - main
+
+jobs:
+  convert_via_pandoc:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo "::set-env name=FILELIST::$(printf '"%s" ' *.md)"
+      - uses: docker://pandoc/latex:2.9
+        with:
+          args: --output=output/resume.pdf README.md # TODO: multi files support
+      - uses: actions/upload-artifact@master
+        with:
+          name: publish-my-resume
+          path: ./README.pdf
+      - uses: EndBug/add-and-commit@v7.0.0
+        with:
+          add: '.'
+          message: 'publish pdf (auto)'
+          push: true
