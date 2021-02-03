@@ -16,9 +16,9 @@ jobs:
           entrypoint: /bin/sh
           args: >-
             -c "
-              tlmgr install ipaex luatexja bxjscls bxwareki everyhook svn-prov type1cm &&
+              tlmgr install ipaex luatexja &&
               tlmgr update latex &&
-              pandoc --standalone --pdf-engine=lualatex -V documentclass=bxjsarticle -V classoption="lualatex,ja=standard,jafont=ipaex" --output=resume.pdf README.md # TODO: multi files support
+              pandoc --standalone --pdf-engine=lualatex -V documentclass=ltjsarticle -V luatexjapresetoptions=hiragino-pron --output=resume.pdf README.md # TODO: multi files support
             "
       - uses: actions/upload-artifact@master
         with:
