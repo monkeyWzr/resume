@@ -11,14 +11,14 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - uses: docker://pandoc/latex:2.9
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.4
         with:
-          entrypoint: /bin/sh
-          args: >-
-            -c "
-              tlmgr install ipaex luatexja ipaex &&
-              pandoc --standalone --pdf-engine=lualatex -V documentclass=ltjsarticle -V luatexjapresetoptions=ipaex --output=resume.pdf README.md # TODO: multi files support
-            "
+          node-version: 12.x
+      - name: Convert Markdown to PDF
+        run: |
+          npm -g install markdown-pdf
+          markdown-pdf -o resume.pdf README.md
       - uses: actions/upload-artifact@master
         with:
           name: publish-my-resume
