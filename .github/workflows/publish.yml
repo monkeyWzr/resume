@@ -16,7 +16,7 @@ jobs:
           entrypoint: /bin/sh
           args: >-
             -c "
-              tlmgr update --self --all &&
+              tlmgr install ipaex luatexja collection-langjapanese &&
               pandoc --standalone --pdf-engine=lualatex -V documentclass=ltjsarticle -V luatexjapresetoptions=ms --output=resume.pdf README.md # TODO: multi files support
             "
       - uses: actions/upload-artifact@master
