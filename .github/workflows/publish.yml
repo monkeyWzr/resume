@@ -16,7 +16,7 @@ jobs:
           sudo apt-get install language-pack-ja-base language-pack-ja
           sudo locale-gen ja_JP.UTF-8
           sudo echo export LANG=ja_JP.UTF-8 >> ~/.profile
-          sudo source ~/.profile
+          source ~/.profile
           sudo echo $LANG
       - uses: actions/checkout@v2
       - name: Setup Node.js environment
