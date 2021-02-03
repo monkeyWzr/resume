@@ -16,7 +16,7 @@ jobs:
           entrypoint: /bin/sh
           args: >-
             -c "
-              tlmgr install ipaex luatexja bxjscls&&
+              tlmgr install ipaex luatexja bxjscls bxwareki everyhook svn-prov type1cm &&
               tlmgr update latex &&
               pandoc --standalone --pdf-engine=lualatex -V documentclass=bxjsarticle -V classoption="pandoc,jafont=sourcehan" --output=resume.pdf README.md # TODO: multi files support
             "
