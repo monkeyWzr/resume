@@ -18,12 +18,12 @@ jobs:
             -c "
               tlmgr install ipaex luatexja &&
               tlmgr update latex &&
-              pandoc --standalone --pdf-engine=lualatex -V documentclass=ltjsarticle -V classoption="pandoc,jafont=sourcehan" --output=resume.pdf README.md # TODO: multi files support
+              pandoc --standalone --pdf-engine=lualatex -V documentclass=ltjsarticle -V classoption=pandoc --output=resume.pdf README.md # TODO: multi files support
             "
       - uses: actions/upload-artifact@master
         with:
           name: publish-my-resume
-          path: README.pdf
+          path: resume.pdf
       - uses: EndBug/add-and-commit@v7.0.0
         with:
           add: '.'
