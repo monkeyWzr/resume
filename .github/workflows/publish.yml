@@ -15,9 +15,11 @@ jobs:
         with:
           entrypoint: /bin/sh
           args: >-
-            tlmgr install ipaex luatexja
-            && tlmgr update latex
-            && pandoc --standalone --pdf-engine=lualatex -V documentclass=ltjsarticle -V luatexjapresetoption=ms --output=resume.pdf README.md # TODO: multi files support
+            -c "
+              tlmgr install ipaex luatexja &&
+              tlmgr update latex &&
+              pandoc --standalone --pdf-engine=lualatex -V documentclass=ltjsarticle -V luatexjapresetoption=ms --output=resume.pdf README.md # TODO: multi files support
+            "
       - uses: actions/upload-artifact@master
         with:
           name: publish-my-resume
