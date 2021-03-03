@@ -1,5 +1,7 @@
 # 職務経歴書
 
+リポジトリ: [https://github.com/monkeyWzr/resume](https://github.com/monkeyWzr/resume)
+
 ## 基本情報
 
 |キー|バリュー|
