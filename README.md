@@ -88,7 +88,7 @@ Couseraで複数のオンラインコースを修了したことがあります�
 
 店頭、対面等オフライン方式で入会した会員のオンライン登録、及びログインID、パスワードの変更機能を提供するWEBアプリケーション
 
-* Spring BootによるREST APIサーバ + TypeScript + Vue.jsによるSPA + Orcaleデータベース
+* Spring BootによるRESTful API + TypeScript + Vue.jsによるSPA + Orcaleデータベース
 * 電話発信サービスTwilioの導入と誤送信防止対策、SPAサイトにおけるアナリティクスサービス(gtag、karte)の設置
 * 詳細設計と実装を担当しました。下記の課題を解決しました
   - SpringのArgumentResolver、RequestBodyAdviceを使ってサーバ側のAPI項目共通バリデーション
