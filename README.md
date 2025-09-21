@@ -15,4 +15,6 @@
 
 2025.9 絶賛作成中
 
+直近の活動はGithubプロフィールをご覧頂けると幸いです: https://github.com/monkeyWzr
+
 Archive: https://github.com/monkeyWzr/resume/blob/394a7fc49650efc50ee5b8aba3d6410c306cdfbc/README.md
